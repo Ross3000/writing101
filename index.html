@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Podcast Website</title>
+    <!-- Google Fonts for vintage vibes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Special+Elite&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Libre Baskerville', 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        header {
+            background-color: #e26cad;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-family: 'Special Elite', 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+        
+        h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+        }
+        
+        .tagline {
+            font-style: italic;
+            opacity: 0.8;
+            margin-top: 10px;
+            font-family: 'Libre Baskerville', 'Georgia', serif;
+        }
+        
+        main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        @media (min-width: 768px) {
+            main {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .podcast-section, .summary-section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .podcast-player {
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+        .episode-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .episode {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+        
+        .episode:last-child {
+            border-bottom: none;
+        }
+        
+        .episode-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+        }
+        
+        .episode-date {
+            color: #666;
+            font-size: 0.9rem;
+            font-family: 'Special Elite', 'Courier New', monospace;
+        }
+        
+        .play-button {
+            background-color: #a92b77;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-weight: bold;
+            font-family: 'Special Elite', 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+        
+        .play-button:hover {
+            background-color: #a92b77;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #666;
+            font-size: 0.9rem;
+            font-family: 'Special Elite', 'Courier New', monospace;
+        }
+        
+        .subscribe-links {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .subscribe-links a {
+            color: #a92b77;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Special Elite', 'Courier New', monospace;
+            letter-spacing: 1px;
+        }
+        
+        .subscribe-links a:hover {
+            text-decoration: underline;
+        }
+        
+        nav {
+            background-color: #a92b77;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        
+        nav li {
+            padding: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-family: 'Special Elite', 'Courier New', monospace;
+            letter-spacing: 1px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .works-cited, .readings-container {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>W.A.F.Radio</h1>
+        <p class="tagline">Breaking Down Pop Star Politics</p>
+        <img src="https://images.squarespace-cdn.com/content/v1/56858337cbced60d3b293aef/1628120248314-9CEWZRP9C2K6THSGKR9R/Albumism_DollyParton_Discography_MainImage_16x9.jpg" 
+             alt="Dolly Parton Discography" 
+             width="500">
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="readings.html">Recommended Readings</a></li>
+            <li><a href="htmlworks-cited.html">Works Cited</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section class="podcast-section">
+            <h2>Latest Episodes</h2>
+            
+            <div class="current-episode">
+                <h3>Now Playing: Episode 42 - Dolly Parton: Talking the 9-5</h3>
+                <audio class="podcast-player" controls>
+                    <source src="#" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <div class="subscribe-links">
+                    <a href="#">Spotify</a>
+                    <a href="#">Apple Podcasts</a>
+                    <a href="#">Google Podcasts</a>
+                    <a href="#">RSS Feed</a>
+                </div>
+            </div>
+            
+            <ul class="episode-list">
+                <li class="episode">
+                    <div class="episode-title">Episode 41: The Boss - Bruce Springsteen's Working Class Anthems</div>
+                    <div class="episode-date">March 26, 2025</div>
+                    <p>We explore how Springsteen's music captures the American working-class experience and his enduring cultural impact.</p>
+                    <button class="play-button">Play Episode</button>
+                </li>
+                <li class="episode">
+                    <div class="episode-title">Episode 40: Johnny Cash - The Man in Black's Musical Legacy</div>
+                    <div class="episode-date">March 19, 2025</div>
+                    <p>A deep dive into Johnny Cash's career, his advocacy for prison reform, and how his music challenged social norms.</p>
+                    <button class="play-button">Play Episode</button>
+                </li>
+                <li class="episode">
+                    <div class="episode-title">Episode 39: Protest Songs Through the Decades</div>
+                    <div class="episode-date">March 12, 2025</div>
+                    <p>We trace the evolution of protest music from folk traditions to contemporary artists and examine their social impact.</p>
+                    <button class="play-button">Play Episode</button>
+                </li>
+            </ul>
+        </section>
+        
+        <section class="summary-section">
+            <h2>Episode Summary</h2>
+            <div class="summary-content">
+                <h3>Episode 42: Dolly Parton - Talking the 9-5</h3>
+                <p>In this fascinating episode, we examine how Dolly Parton became an Icon for working women and continues to resonate today.</p>
+                
+                <h4>Intro:</h4>
+                <p>
+                    <strong>Dolly Parton: Talkin’ the 9 to 5</strong> explores how Dolly Parton has developed one of the most enduring and beloved public personas in American pop culture. In this episode, we unpack her commitment to love, acceptance, and generosity, which we believe are core values that shape her ethos. Through her philanthropic work, musical legacy, and intentional political neutrality, Dolly manages to transcend divides and maintain a loyal, multigenerational fanbase. We ask: how does someone stay relevant and universally admired, considering these actions?
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 My Podcast Show. All rights reserved.</p>
+        <p>Contact: podcast@example.com</p>
+    </footer>
+</body>
+</html>
